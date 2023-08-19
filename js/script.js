@@ -98,11 +98,13 @@ function buildAndShowHomeHTML (categories) {
     homeHtmlUrl,
     function (homeHtml) {
 
-      // TODO: STEP 2: Here, call chooseRandomCategory, passing it retrieved 'categories'
-      // Pay attention to what type of data that function returns vs what the chosenCategoryShortName
-      // variable's name implies it expects.
-      // var chosenCategoryShortName = ....
-      var chosenCategoryShortName = chooseRandomCategory(categories).short_name;
+      // // TODO: STEP 2: Here, call chooseRandomCategory, passing it retrieved 'categories'
+      // // Pay attention to what type of data that function returns vs what the chosenCategoryShortName
+      // // variable's name implies it expects.
+      // // var chosenCategoryShortName = ....
+      // var chosenCategory = chooseRandomCategory(categories);
+      // var chosenCategoryShortName = chosenCategory.short_name;
+      var chosenCategoryShortName = chooseRandomCategory(categories).short_name; 
 
       // TODO: STEP 3: Substitute {{randomCategoryShortName}} in the home html snippet with the
       // chosen category from STEP 2. Use existing insertProperty function for that purpose.
@@ -125,9 +127,7 @@ function buildAndShowHomeHTML (categories) {
       // Use the existing insertHtml function for that purpose. Look through this code for an example
       // of how to do that.
       // ....
-      insertHtml("#main-content",  homeHtmlToInsertIntoMainPage);
-
-
+      insertHtml("#main-content", homeHtmlToInsertIntoMainPage);
     },
     false); // False here because we are getting just regular HTML from the server, so no need to process JSON.
 }
@@ -346,3 +346,12 @@ function insertItemPortionName(html,
 global.$dc = dc;
 
 })(window);
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////
+
+
+
